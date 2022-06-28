@@ -1,26 +1,16 @@
 var MyGame = {};
-
-MyGame.Boot = function ()
-{
+MyGame.Boot = function () {
     this.face = null;
 };
-
 MyGame.Boot.prototype.constructor = MyGame.Boot;
-
 MyGame.Boot.prototype = {
-
-    preload: function ()
-    {
+    preload: function () {
         this.load.image('face', 'assets/pics/bw-face.png');
     },
-
-    create: function ()
-    {
+    create: function () {
         this.face = this.add.image(400, 300, 'face');
     }
-
 };
-
 var config = {
     type: Phaser.CANVAS,
     parent: 'phaser-example',
@@ -28,5 +18,4 @@ var config = {
     height: 600,
     scene: MyGame.Boot
 };
-
 var game = new Phaser.Game(config);

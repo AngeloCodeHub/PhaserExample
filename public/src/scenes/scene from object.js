@@ -1,4 +1,3 @@
-
 var config = {
     type: Phaser.CANVAS,
     parent: 'phaser-example',
@@ -9,15 +8,10 @@ var config = {
         create: create
     }
 };
-
 var game = new Phaser.Game(config);
-
-function preload ()
-{
+function preload() {
     this.load.image('face', 'assets/pics/bw-face.png');
 }
-
-function create ()
-{
+function create() {
     this.add.image(400, 300, 'face');
 }

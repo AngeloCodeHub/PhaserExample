@@ -1,22 +1,14 @@
 class MyScene extends Phaser.Scene {
-
-    constructor (config)
-    {
+    constructor(config) {
         super(config);
     }
-
-    preload ()
-    {
+    preload() {
         this.load.image('face', 'assets/pics/bw-face.png');
     }
-
-    create ()
-    {
+    create() {
         this.face = this.add.image(400, 300, 'face');
     }
-
 }
-
 var config = {
     type: Phaser.WEBGL,
     width: 800,
@@ -25,5 +17,4 @@ var config = {
     parent: 'phaser-example',
     scene: MyScene
 };
-
 var game = new Phaser.Game(config);

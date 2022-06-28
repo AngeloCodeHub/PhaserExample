@@ -10,22 +10,15 @@ var config = {
         create: create
     }
 };
-
 var game = new Phaser.Game(config);
-
-function init (data)
-{
+// boot data
+function init(data) {
     this.png = data.image;
 }
-
-function preload ()
-{
+function preload() {
     this.load.image('mech', 'assets/pics/' + this.png);
 }
-
-function create (data)
-{
+function create(data) {
     this.add.image(data.x, data.y, 'mech');
 }
-
 game.scene.start('test', { image: 'titan-mech.png', x: 400, y: 300 });
